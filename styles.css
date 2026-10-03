@@ -3,13 +3,13 @@
 
 /* --- Variables de Color Neón y Estilizado --- */
 :root {
-    --bg-color: #08080a;
-    --card-bg: rgba(18, 18, 22, 0.85); /* Fondo semiautotransparente para dejar ver el fondo */
+    --bg-color: #1a222d;
+    --card-bg: rgba(15, 20, 28, 0.85); /* Fondo oscuro con transparencia para resaltar texto sobre el patrón */
     --primary-red: #ff002b;
     --red-glow: rgba(255, 0, 43, 0.6);
     --text-white: #ffffff;
-    --text-gray: #d0d0da;
-    --border-color: rgba(255, 0, 43, 0.3);
+    --text-gray: #e2e8f0;
+    --border-color: rgba(255, 0, 43, 0.4);
 }
 
 /* --- Reseteo Básico --- */
@@ -21,12 +21,11 @@
 }
 
 body {
-    /* Fondo con la imagen y capa oscura traslúcida */
-    background: linear-gradient(rgba(8, 8, 10, 0.88), rgba(8, 8, 10, 0.88)), url('fondo.jpg');
-    background-size: cover;
-    background-position: center;
+    /* Patrón de imagen repetible con capa oscura suave */
+    background: linear-gradient(rgba(18, 24, 33, 0.75), rgba(18, 24, 33, 0.75)), url('fondo-hardware.jpg');
+    background-size: 500px;
+    background-repeat: repeat;
     background-attachment: fixed;
-    background-repeat: no-repeat;
     color: var(--text-white);
     line-height: 1.6;
     overflow-x: hidden;
@@ -86,17 +85,17 @@ h1, h2, h3 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 15px;
-    text-shadow: 0 0 15px var(--red-glow);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 0 15px var(--red-glow);
 }
 
 .intro-lead {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--primary-red);
+    color: #ff3355;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 .about-section p {
@@ -106,7 +105,7 @@ h1, h2, h3 {
     max-width: 850px;
     margin-left: auto;
     margin-right: auto;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.95);
 }
 
 .about-section .goal {
@@ -117,8 +116,9 @@ h1, h2, h3 {
     border-right: 3px solid var(--primary-red);
     padding: 12px 20px;
     display: inline-block;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(5px);
+    background: rgba(15, 20, 28, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
 }
 
 .badges {
@@ -130,7 +130,7 @@ h1, h2, h3 {
 }
 
 .badge {
-    background: linear-gradient(135deg, rgba(255, 0, 43, 0.3) 0%, rgba(10, 10, 12, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(255, 0, 43, 0.4) 0%, rgba(15, 20, 28, 0.9) 100%);
     border: 1px solid var(--primary-red);
     color: var(--text-white);
     padding: 10px 22px;
@@ -140,7 +140,7 @@ h1, h2, h3 {
     text-transform: uppercase;
     letter-spacing: 1px;
     box-shadow: 0 0 15px rgba(255, 0, 43, 0.3);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
 }
 
 /* --- Sección de Servicios --- */
@@ -154,16 +154,16 @@ h1, h2, h3 {
     font-size: 2.8rem;
     color: var(--text-white);
     font-weight: 700;
-    text-shadow: 0 0 10px var(--red-glow);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 0 10px var(--red-glow);
 }
 
 .subtitle {
     text-align: center;
-    color: var(--primary-red);
+    color: #ff3355;
     margin-bottom: 50px;
     font-weight: 600;
     letter-spacing: 1px;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 .services-grid {
@@ -184,7 +184,7 @@ h1, h2, h3 {
     text-align: center;
     position: relative;
     overflow: hidden;
-    backdrop-filter: blur(8px); /* Efecto vidrio translúcido */
+    backdrop-filter: blur(10px);
 }
 
 .service-card::before {
@@ -202,8 +202,8 @@ h1, h2, h3 {
 .service-card:hover {
     transform: translateY(-10px);
     border-color: var(--primary-red);
-    box-shadow: 0 10px 30px rgba(255, 0, 43, 0.35);
-    background-color: rgba(22, 22, 28, 0.95);
+    box-shadow: 0 10px 30px rgba(255, 0, 43, 0.45);
+    background-color: rgba(22, 28, 38, 0.95);
 }
 
 .service-card:hover::before {
@@ -214,13 +214,13 @@ h1, h2, h3 {
     font-size: 2.8rem;
     color: var(--primary-red);
     margin-bottom: 20px;
-    background: rgba(255, 0, 43, 0.15);
+    background: rgba(255, 0, 43, 0.2);
     width: 80px;
     height: 80px;
     line-height: 80px;
     border-radius: 50%;
-    border: 1px solid rgba(255, 0, 43, 0.4);
-    box-shadow: 0 0 15px rgba(255, 0, 43, 0.2);
+    border: 1px solid rgba(255, 0, 43, 0.5);
+    box-shadow: 0 0 15px rgba(255, 0, 43, 0.3);
 }
 
 .service-card h3 {
@@ -240,19 +240,20 @@ h1, h2, h3 {
 .contact-section {
     padding: 60px 0 30px;
     text-align: center;
-    background: radial-gradient(circle at bottom, rgba(255, 0, 43, 0.25) 0%, transparent 80%);
+    background: radial-gradient(circle at bottom, rgba(255, 0, 43, 0.3) 0%, transparent 80%);
 }
 
 .contact-section h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    text-shadow: 0 0 10px var(--red-glow);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 0 10px var(--red-glow);
 }
 
 .contact-section p {
     color: var(--text-gray);
     margin-bottom: 35px;
     font-size: 1.1rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
 }
 
 .contact-links {
@@ -274,7 +275,7 @@ h1, h2, h3 {
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
 }
 
 .contact-button:hover {
@@ -283,25 +284,35 @@ h1, h2, h3 {
 
 .whatsapp {
     background: #25D366;
-    box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
 }
 
 .whatsapp:hover {
-    box-shadow: 0 0 30px rgba(37, 211, 102, 0.7);
+    box-shadow: 0 0 30px rgba(37, 211, 102, 0.8);
+}
+
+.email {
+    background: #ea4335;
+    box-shadow: 0 0 20px rgba(234, 67, 53, 0.5);
+}
+
+.email:hover {
+    box-shadow: 0 0 30px rgba(234, 67, 53, 0.8);
 }
 
 .instagram {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    box-shadow: 0 0 20px rgba(220, 39, 67, 0.4);
+    box-shadow: 0 0 20px rgba(220, 39, 67, 0.5);
 }
 
 .instagram:hover {
-    box-shadow: 0 0 30px rgba(220, 39, 67, 0.7);
+    box-shadow: 0 0 30px rgba(220, 39, 67, 0.8);
 }
 
 .copyright {
     font-size: 0.85rem;
-    color: #888;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #aaa;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
     padding-top: 20px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 }
